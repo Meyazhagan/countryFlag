@@ -24,7 +24,6 @@ function createCards(elements) {
   container.className = "container";
   for (let i = 0; i < 15; i++) {
     container.innerHTML += createCard(elements[i]);
-    console.log(elements[i]);
   }
   document.body.appendChild(container);
 }
