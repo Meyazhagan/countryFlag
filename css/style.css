@@ -1,5 +1,5 @@
 body {
-  background-color: cornsilk;
+  background-color: whitesmoke;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container {
@@ -19,11 +19,11 @@ h1 {
   background-color: white;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 3px gray;
 }
 
 .card:hover {
-  background-color: aliceblue;
+  background-color: azure;
   transform: scale(1.02);
   box-shadow: 0 0 15px gray;
 }
@@ -40,6 +40,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  letter-spacing: 0.1rem;
   margin-top: 0;
   color: #2e3c42;
 }
