@@ -53,3 +53,23 @@ p {
   font-weight: bold;
   color: #454953;
 }
+
+#limit {
+  background-color: azure;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 15px;
+  width: 2rem;
+  text-align: center;
+}
+
+#input-label {
+  letter-spacing: 0.1rem;
+}
+
+.input {
+  /* padding-left: 10rem; */
+  display: flex;
+  justify-content: center;
+}

@@ -11,19 +11,35 @@ function createCard(element) {
       <p><span class="bold">Region : </span>${element.region}</p>
       <p><span class="bold">Captial :</span> ${element.capital}</p>
   </div>
-</div>`;
+  </div>`;
 }
 
-fetch("https://restcountries.eu/rest/v2/all")
-  .then((res) => res.json())
-  .then((elements) => createCards(elements))
-  .catch((err) => console.log(err));
-
-function createCards(elements) {
-  const container = document.createElement("div");
-  container.className = "container";
-  for (let i = 0; i < 15; i++) {
+function createCards(elements, n) {
+  const container = document.querySelector(".container");
+  container.innerHTML = "";
+  for (let i = 0; i < n; i++) {
     container.innerHTML += createCard(elements[i]);
   }
+
   document.body.appendChild(container);
+}
+
+async function getData() {
+  const res = await fetch("https://restcountries.eu/rest/v2/all");
+  const data = await res.json();
+  return data;
+}
+
+let country;
+
+(async () => {
+  country = await getData();
+  update();
+})();
+
+function update() {
+  let n = +document.querySelector("#limit").value;
+  if (n <= country.length) {
+    createCards(country, n);
+  }
 }
