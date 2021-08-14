@@ -54,7 +54,7 @@ p {
   color: #454953;
 }
 
-#limit {
+.input-box {
   background-color: azure;
   border: 1px solid grey;
   border-radius: 5px;
@@ -64,12 +64,12 @@ p {
   text-align: center;
 }
 
-#input-label {
+.input-label {
+  margin-left: 1rem;
   letter-spacing: 0.1rem;
 }
 
 .input {
-  /* padding-left: 10rem; */
   display: flex;
   justify-content: center;
 }
