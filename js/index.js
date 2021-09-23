@@ -25,7 +25,7 @@ function createCards(elements, n) {
 }
 
 async function getData() {
-  const res = await fetch("https://restcountries.eu/rest/v2/all");
+  const res = await fetch("https://restcountries.com/v3/all");
   const data = await res.json();
   return data;
 }
